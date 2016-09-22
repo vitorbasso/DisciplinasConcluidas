@@ -46,3 +46,50 @@
 	"pilha.h"
 	"streamlined.h"
 
+1467013126 source:c:\users\vitor\documents\github\trabalhosfinais\labirinto\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+
+1467006442 c:\users\vitor\documents\github\trabalhosfinais\labirinto\fila.h
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+
+1467006503 c:\users\vitor\documents\github\trabalhosfinais\labirinto\pilha.h
+
+1467006503 source:c:\users\vitor\documents\github\trabalhosfinais\labirinto\labirinto.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"labirinto.h"
+
+1467006469 c:\users\vitor\documents\github\trabalhosfinais\labirinto\labirinto.h
+
+1467048354 source:c:\users\vitor\documents\github\trabalhosfinais\labirinto\main.c
+	<stdio.h>
+	<stdlib.h>
+	"streamlined.h"
+	"fila.h"
+
+1467006592 c:\users\vitor\documents\github\trabalhosfinais\labirinto\streamlined.h
+	<stdio.h>
+	<stdlib.h>
+	"labirinto.h"
+	"fila.h"
+	"pilha.h"
+
+1467006529 source:c:\users\vitor\documents\github\trabalhosfinais\labirinto\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+
+1467048791 source:c:\users\vitor\documents\github\trabalhosfinais\labirinto\streamlined.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"labirinto.h"
+	"fila.h"
+	"pilha.h"
+	"streamlined.h"
+
