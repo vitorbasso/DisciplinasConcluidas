@@ -1,0 +1,149 @@
+# depslib dependency file v1.0
+1478981503 source:c:\users\vitor\documents\github\trabalhoaed2\trabalho aed2\rnp\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"Lista.h"
+
+1479154863 c:\users\vitor\documents\github\trabalhoaed2\trabalho aed2\rnp\lista.h
+
+1479083782 D
+
+1479170468 source:c:\users\vitor\documents\github\trabalhoaed2\trabalho aed2\rnp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Rnp.h"
+
+1479152949 s/heads/master
+	<stdio.h>
+	<stdlib.h>
+	"Rnp.h"
+	"Lista.h"
+	<stdio.h>
+	<stdlib.h>
+	"Lista.h"
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	"Rnp.h"
+	"Lista.h"
+	"Grafo.h"
+
+1479154618 source:c:\users\vitor\documents\github\trabalhoaed2\trabalho aed2\rnp\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"Lista.h"
+	<string.h>
+
+1479170529 source:c:\users\vitor\documents\github\trabalhoaed2\trabalho aed2\rnp\grafo.c
+	<stdio.h>
+	<stdlib.h>
+	"Grafo.h"
+	<string.h>
+
+1479170468 c:\users\vitor\documents\github\trabalhoaed2\trabalho aed2\rnp\grafo.h
+
+1479165858 c:\users\vitor\documents\github\trabalhoaed2\trabalho aed2\rnp\rnp.h
+	"Grafo.h"
+
+1479165833 source:c:\users\vitor\documents\github\trabalhoaed2\trabalho aed2\rnp\rnp.c
+	<stdlib.h>
+	<stdio.h>
+	"Rnp.h"
+	"Grafo.h"
+
+1479172725 source:c:\users\vitor\desktop\rnp\grafo.c
+	<stdio.h>
+	<stdlib.h>
+	"Grafo.h"
+	<string.h>
+
+1479172725 c:\users\vitor\desktop\rnp\grafo.h
+
+1479172725 source:c:\users\vitor\desktop\rnp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Rnp.h"
+
+1479165858 c:\users\vitor\desktop\rnp\rnp.h
+	"Grafo.h"
+
+1479165833 source:c:\users\vitor\desktop\rnp\rnp.c
+	<stdlib.h>
+	<stdio.h>
+	"Rnp.h"
+	"Grafo.h"
+
+1479172725 source:c:\users\weuler\desktop\rnp\grafo.c
+	<stdio.h>
+	<stdlib.h>
+	"Grafo.h"
+	<string.h>
+
+1479235879 c:\users\weuler\desktop\rnp\grafo.h
+
+1479237395 source:c:\users\weuler\desktop\rnp\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Rnp.h"
+
+1479236786 c:\users\weuler\desktop\rnp\rnp.h
+	"Grafo.h"
+
+1479237191 source:c:\users\weuler\desktop\rnp\rnp.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Rnp.h"
+	"Grafo.h"
+
+1479238106 source:c:\users\vitor\downloads\rnp\grafo.c
+	<stdio.h>
+	<stdlib.h>
+	"Grafo.h"
+	<string.h>
+
+1479238106 c:\users\vitor\downloads\rnp\grafo.h
+
+1479238106 source:c:\users\vitor\downloads\rnp\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Rnp.h"
+
+1479238106 c:\users\vitor\downloads\rnp\rnp.h
+	"Grafo.h"
+
+1479249666 source:c:\users\vitor\documents\github\trabalhoaed2\rnp\grafo.c
+	<stdio.h>
+	<stdlib.h>
+	"Grafo.h"
+	<string.h>
+
+1479249666 c:\users\vitor\documents\github\trabalhoaed2\rnp\grafo.h
+
+1479268378 source:c:\users\vitor\documents\github\trabalhoaed2\rnp\rnp.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Rnp.h"
+	"Grafo.h"
+
+1479239084 c:\users\vitor\documents\github\trabalhoaed2\rnp\rnp.h
+	"Grafo.h"
+
+1479249666 source:c:\users\vitor\documents\github\trabalhoaed2\rnp\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Rnp.h"
+
+1479250903 source:c:\users\vitor\documents\github\trabalhoaed2\rnp\menu.c
+	"Menu.h"
+	"Rnp.h"
+	"Grafo.h"
+
+1479249666 c:\users\vitor\documents\github\trabalhoaed2\rnp\menu.h
+	<stdio.h>
+	"Rnp.h"
+
