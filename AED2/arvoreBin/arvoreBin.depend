@@ -45,3 +45,26 @@
 	<stdlib.h>
 	"Arvore.h"
 
+1481521519 source:c:\users\vitor\documents\github\trabalhosfinais\aed2\arvorebin\arvore.c
+	<stdio.h>
+	<stdlib.h>
+	"Arvore.h"
+	"Fila.h"
+
+1481519121 c:\users\vitor\documents\github\trabalhosfinais\aed2\arvorebin\arvore.h
+
+1481515946 c:\users\vitor\documents\github\trabalhosfinais\aed2\arvorebin\fila.h
+	<stdio.h>
+	<stdlib.h>
+	"Arvore.h"
+
+1481520658 source:c:\users\vitor\documents\github\trabalhosfinais\aed2\arvorebin\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+
+1481519231 source:c:\users\vitor\documents\github\trabalhosfinais\aed2\arvorebin\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Arvore.h"
+
