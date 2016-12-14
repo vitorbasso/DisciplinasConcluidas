@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1481627522 source:c:\users\vitor\documents\github\trabalhosfinais\arvoregen\arvore_generica.c
+	<stdlib.h>
+	<stdio.h>
+	"fila_arvore_generica.h"
+
+1481624454 c:\users\vitor\documents\github\trabalhosfinais\arvoregen\fila_arvore_generica.h
+	<stdio.h>
+	<stdlib.h>
+	"arvore_generica.h"
+
+1481624466 c:\users\vitor\documents\github\trabalhosfinais\arvoregen\arvore_generica.h
+	<stdio.h>
+	<stdlib.h>
+
+1481624710 source:c:\users\vitor\documents\github\trabalhosfinais\arvoregen\fila_arvore_generica.c
+	<stdio.h>
+	<stdlib.h>
+	"fila_arvore_generica.h"
+
+1481639532 source:c:\users\vitor\documents\github\trabalhosfinais\arvoregen\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arvore_generica.h"
+

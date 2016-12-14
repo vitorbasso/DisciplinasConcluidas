@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481640519 source:c:\users\vitor\documents\github\trabalhosfinais\arvorebb\arvore_binaria_busca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

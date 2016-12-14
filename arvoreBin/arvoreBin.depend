@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1481639096 source:c:\users\vitor\documents\github\trabalhosfinais\arvorebin\arvore_binaria.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"arvore_binaria.h"
+	"Fila.h"
+
+1481638618 c:\users\vitor\documents\github\trabalhosfinais\arvorebin\arvore_binaria.h
+
+1481606026 c:\users\vitor\documents\github\trabalhosfinais\arvorebin\fila.h
+	<stdio.h>
+	<stdlib.h>
+	"arvore_binaria.h"
+
+1481606576 source:c:\users\vitor\documents\github\trabalhosfinais\arvorebin\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"Fila.h"
+
+1481639198 source:c:\users\vitor\documents\github\trabalhosfinais\arvorebin\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arvore_binaria.h"
+
