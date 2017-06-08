@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1481669641 source:c:\users\vitor\documents\github\aed2\arvoregen\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Arvore.h"
+
+1481682065 c:\users\vitor\documents\github\aed2\arvoregen\arvore.h
+
+1481682064 source:c:\users\vitor\documents\github\aed2\arvoregen\arvore.c
+	<stdio.h>
+	<stdlib.h>
+	"Arvore.h"
+

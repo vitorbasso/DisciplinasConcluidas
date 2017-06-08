@@ -1,0 +1,109 @@
+#Aloca dinamicamente N words da memoria e em seguida le N numeros
+#por fim calcula a media de N
+
+.data
+
+str1:	.asciiz	"Digite o numero de numeros a serem lidos: \n"
+str2:	.asciiz	"Digite o proximo numero: \n"
+str3:	.asciiz	"A media eh: \n"
+
+.text
+
+#Le o numero N de numeros a serem lidos
+	li	$v0, 4		#codigo imprime string
+	la	$a0, str1	#Endereço da string
+	syscall			#Executa serviço
+	
+	li	$v0, 5		#codigo le inteiro
+	syscall			#Executa serviço
+	
+	add	$s0, $v0, $zero	#Move o que tem em v0 para s0
+	
+#Alocar dinamicamente espaço para N words
+	li	$v0, 9		#Codigo para aloc memoria
+	sll	$a0, $s0, 2	#mult o num por 4 - 4 bytes por word
+	syscall
+	
+	add	$s1, $v0, $zero	#salva o endereço da primeira posiçao da memoria alocada em s1
+	
+#chamar uma funçao que le N numeros e calcula a media
+	add	$a0, $s0, $zero	#arg0 - N
+	add	$a1, $s1, $zero	#arg1 - ponteiro para a primeira posiçao da memória
+	jal leECalcula
+	
+#reportar o resultado
+	add	$s2, $v0, $zero	#move o return da funçao para s2
+	li	$v0, 4		#cod imprime string
+	la	$a0, str3	#endereço da string
+	syscall
+	
+	li	$v0, 1		#cod para imprimir inteiro
+	add	$a0, $s2, $zero	#inteiro a ser impresso
+	syscall
+	
+#terminar o programa
+	li	$v0, 10
+	syscall
+	
+
+	
+leECalcula:
+	#Salva dados na pilha
+	sw	$a0, 0($sp)	# N
+	sw	$a1, 4($sp)	# end da memoria alocada
+	sw	$s0, 8($sp)	# end da memoria alocada
+	sw	$s1, 12($sp)	# end da memoria alocada
+	
+	addi	$sp, $sp, -16
+	#--------------------------------------------------------------- Salva na pilha os reg S`s
+	#Le N inteiros
+	add	$s0, $zero, $zero	#s0 = contador (c)
+	add	$s1, $a1, $zero		#copia de a1 em s1 ( primeiro endereço da memoria alocada)
+	#----------------------------------------------------- inicio for - condiçao
+FOR1:	slt	$t0, $s0, $a0
+	beq	$t0, $zero, SAI1
+	#---------------------------- inicio for corpo
+	add	$t7, $a0, $zero
+	li	$v0, 4		#cod imprime str
+	la	$a0, str2	#end da str
+	syscall			#executa serviço
+	
+	li	$v0, 5
+	syscall
+	
+	sw	$v0, 0($s1)	#copia o elemento lido na primeira na proxima posiçao livre da mem
+	
+	addi	$s1, $s1, 4	#ponteiro aponta pra proxima posiçao livre da memoria
+	#-----------------------------------------
+	addi	$s0, $s0, 1
+	add	$a0, $t7, $zero
+	  j	FOR1
+	#----------------------------------------
+	#Valor de retorno
+	
+SAI1:	add	$s0, $zero, $zero	#s0 = contador (c)
+	add	$s1, $a1, $zero		#copia de a1 em s1 ( primeiro end da memoria)
+	add	$v0, $zero, $zero	#return = 0
+	#-------------------------- For 2 - condiçao
+FOR2:	slt	$t0, $s0, $a0
+	beq	$t0, $zero, SAI2
+	#--------------------------- For 2 - corpo
+	lw	$s2, 0($s1)		#Salva o numero lido da proxima posiçao livre da mem
+	add	$v0, $v0, $s2		#acumula os valores do array em v0
+	
+	addi	$s1, $s1, 4		#Aponta para o proximo valor da memoria = ponteiro++
+	#------------------------------
+	addi	$s0, $s0, 1
+	j	FOR2
+	#-------------------------------
+SAI2:	div	$v0, $a0
+	mflo	$v0
+	mfhi	$v1
+	#------------------------------------------------Restaura dados da pilha
+	lw	$a0, 0($sp)
+	lw	$a1, 4($sp)
+	lw	$s0, 8($sp)
+	lw	$s1, 12($sp)
+	addi	$sp, $sp, 16
+	
+	jr	$ra

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1476723495 source:c:\users\vitor\desktop\estudo\ufu\aed2\aed2 estudo\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1476854259 source:c:\users\vitor\documents\github\aed2\sort\main.c
+	<stdio.h>
+	<stdlib.h>
+

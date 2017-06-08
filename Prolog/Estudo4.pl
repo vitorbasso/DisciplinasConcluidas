@@ -1,0 +1,62 @@
+concatena([],L,L).
+concatena([X|R],L,[X|C]):-
+	concatena(R,L,C).
+
+adiciona(X,L,[X|L]).
+
+tira(_,[],[]).
+tira(X,[X|R],R).
+tira(X,[Y|R],[Y|Z]):-
+	tira(X,R,Z).
+
+adiciona_fim(X,L,NL):-
+	concatena(L,[X],NL).
+
+tira_todos(_,[],[]):-!.
+tira_todos(X,[X|R],Z):-
+	tira_todos(X,R,Z),!.
+tira_todos(X,[Y|R],[Y|Z]):-
+	tira_todos(X,R,Z),!.
+
+pertence(X,[X|_]):-!.
+pertence(X,[_|R]):-
+	pertence(X,R),!.
+
+ultimo(X,[X|[]]):-!.
+ultimo(X,[_|R]):-
+	ultimo(X,R),!.
+
+sublista([],_):-!.
+sublista([X|R],L):-
+	pertence(X,L),
+	sublista(R,L).
+
+permutacao([],[]):-!.
+permutacao([X|R],L):-
+	tira(X,L,Z),
+	permutacao(R,Z),!.
+
+inserir(X,[],[X]):-!.
+inserir(X,[Y|R],[X,Y|R]):-
+	X<Y,!.
+inserir(X,[Y|R],[Y|L]):-
+	X>=Y,
+	inserir(X,R,L),!.
+
+ordena_crescente([X],[X]):-!.
+ordena_crescente([X|R],L):-
+	ordena_crescente(R,Y),
+	inserir(X,Y,L),!.
+
+inserir2(X,[],[X]):-!.
+inserir2(X,[Y|R],[X,Y|R]):-
+	X>Y,!.
+inserir2(X,[Y|R],[Y|L]):-
+	X=<Y,
+	inserir2(X,R,L),!.
+
+
+ordena_decrescente([X],[X]):-!.
+ordena_decrescente([X|R],L):-
+	ordena_decrescente(R,Y),
+	inserir2(X,Y,L).

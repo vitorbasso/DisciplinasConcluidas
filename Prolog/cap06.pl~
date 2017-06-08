@@ -1,0 +1,88 @@
+membro(X,[X|_]):-!.
+membro(X,[_|L]):-
+	membro(X,L).
+
+n_esimo(X,1,[X|_]):-!.
+n_esimo(X,Y,[_|O]):-
+	Y1 is Y-1,
+	n_esimo(X,Y1,O).
+
+no_elementos([],0):-!.
+no_elementos([_|Y],N):-
+	no_elementos(Y,N1),
+	N is N1+1.
+
+tire_elemento(_,[],[]):-!.
+tire_elemento(X,[X|Y],Y):-!.
+tire_elemento(X,[Z|Y],[Z|L]):-
+	tire_elemento(X,Y,L).
+
+retirar_ocor(_,[],[]):-!.
+retirar_ocor(X,[X|Y],Y):-
+	not(membro(X,Y)),!.
+retirar_ocor(X,[X|Y],L):-
+	retirar_ocor(X,Y,L),!.
+retirar_ocor(X,[Z|Y],[Z|L]):-
+	retirar_ocor(X,Y,L).
+
+retire_repet([],[]):-!.
+retire_repet([X|Y],[X|L1]):-
+	retirar_ocor(X,Y,L),
+	retire_repet(L,L1).
+
+concatenar([],L,L):-!.
+concatenar(L,[],L):-!.
+concatenar([X|Y],L,[X|L1]):-
+	concatenar(Y,L,L1).
+
+maior([],0):-!.
+maior([X|Y],X):-
+	maior(Y,N1),
+	X>N1,!.
+maior([_|Y],N):-
+	maior(Y,N).
+
+menor([],3000):-!.
+menor([X|Y],X):-
+	menor(Y,N),
+	X<N,!.
+menor([_|Y],N):-
+	menor(Y,N).
+
+inserir_cabeca(X,L,[X|L]).
+
+inserir_N(X,_,[],[X]):-!.
+inserir_N(X,N,L,[X|L]):-
+	N=<1,!.
+inserir_N(X,N,[Y|L],[Y|L1]):-
+	N1 is N-1,
+	inserir_N(X,N1,L,L1).
+
+inverter([],[]):-!.
+inverter([X],[X]):-!.
+inverter([X|L],L2):-
+	inverter(L,L1),
+	concatenar(L1,[X],L2).
+
+substitui(_,_,[],[]):-!.
+substitui(X,Y,[X|T],[Y|T]):-!.
+substitui(X,Y,[Z|T],[Z|T1]):-
+	substitui(X,Y,T,T1).
+
+duplicar_todos([],[]):-!.
+duplicar_todos([X|T],[X,X|T1]):-
+	duplicar_todos(T,T1).
+
+duplicar_um(_,[],[]):-!.
+duplicar_um(X,[X|T],[X,X|T1]):-
+	duplicar_um(X,T,T1),!.
+duplicar_um(X,[Z|T],[Z|T1]):-
+	duplicar_um(X,T,T1).
+
+uniao([],L,L):-!.
+uniao(L,[],L):-!.
+uniao([X|T],[X|Z],[X|L]):-
+	uniao(T,Z,L),!.
+uniao([X|T],[Y|Z],[X,Y|L]):-
+      uniao(T,Z,L).
+
